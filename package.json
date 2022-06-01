@@ -1,0 +1,46 @@
+{
+  "name": "express-worker",
+  "version": "1.0.0",
+  "description": "A sample showing an express server with a worker process",
+  "author": {
+    "name": "Ifeanyi Echeruo",
+    "email": "ifeanyi (dot) echeruo (at) outlook (dot) com",
+    "url": "http://ifeanyi.echeruo.net"
+  },
+  "license": "MIY",
+  "bin": "lib/start.js",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/ifeanyiecheruo/express-worker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifeanyiecheruo/express-worker"
+  },
+  "type": "module",
+  "scripts": {
+    "prepack": "npm run build",
+    "test": "npm run format && npm run lint && jest",
+    "start": "node ./lib/start.js",
+    "build": "npm run clean && npm run compile",
+    "compile": "npx tsc && copyfiles src/public lib/server",
+    "clean": "rimraf lib; rimraf coverage",
+    "lint": "eslint",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^14.18.1",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.14.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.4"
+  }
+}

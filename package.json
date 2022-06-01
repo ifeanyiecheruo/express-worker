@@ -21,7 +21,7 @@
     "test": "npm run format && npm run lint && jest",
     "start": "node ./lib/start.js",
     "build": "npm run clean && npm run compile",
-    "compile": "npx tsc && copyfiles src/public lib/server'",
+    "compile": "npx tsc && copyfiles src/public lib/server",
     "clean": "rimraf lib; rimraf coverage",
     "lint": "eslint",
     "format": "prettier --write src/**/*.ts"
